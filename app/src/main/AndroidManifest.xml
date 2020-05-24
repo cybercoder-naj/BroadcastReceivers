@@ -17,6 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver android:name=".ExampleReceiver2" />
+        <receiver android:name=".ExampleReceiver">
+            <intent-filter>
+                <action android:name="com.nishant.EXAMPLE_ACTION" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

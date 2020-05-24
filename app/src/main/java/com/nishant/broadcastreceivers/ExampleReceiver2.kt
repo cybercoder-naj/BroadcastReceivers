@@ -5,10 +5,8 @@ import android.content.Context
 import android.content.Intent
 import android.widget.Toast
 
-class ExampleReceiver : BroadcastReceiver() {
+class ExampleReceiver2 : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        intent?.let {
-            Toast.makeText(context, "ER Triggered", Toast.LENGTH_SHORT).show()
-        }
+        Toast.makeText(context, "ER2 Triggered", Toast.LENGTH_SHORT).show()
     }
 }
