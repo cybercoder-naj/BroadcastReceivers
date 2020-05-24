@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var broadcast: ExampleReceiver
+    private var broadcast = ExampleReceiver()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        val intentFilter = IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION).also {
+        IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION).also {
             registerReceiver(broadcast, it)
         }
     }
